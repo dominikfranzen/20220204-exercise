@@ -26,7 +26,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_SESSION_TOKEN: ${{ secrets.SESSION_TOKEN }}
-          AWS_REGION: us-east-1
+          AWS_REGION: us-west-2
         run: |
           aws s3api list-buckets
           aws s3api create bucket --bucket githubbouquet123123
