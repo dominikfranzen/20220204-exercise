@@ -30,5 +30,5 @@ jobs:
         run: |
           aws s3api list-buckets
           aws s3api create-bucket --bucket githubbouquet$RANDOM --create-bucket-configuration LocationConstraint=us-west-2
-          aws s3api list buckets
+          aws s3api list-buckets
           
