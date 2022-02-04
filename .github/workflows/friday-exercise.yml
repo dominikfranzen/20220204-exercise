@@ -29,6 +29,7 @@ jobs:
           AWS_REGION: us-west-2
         run: |
           aws s3api list-buckets
-          aws s3api create-bucket --bucket githubbouquet$RANDOM --create-bucket-configuration LocationConstraint=us-west-2
-          aws s3api list-buckets
+          BUCKETNAME=githubbouquet$RANDOM
+          aws s3api create-bucket --bucket $BUCKETNAME --create-bucket-configuration LocationConstraint=us-west-2
+          aws s3 cp index.html s3://$BUCKETNAME/index.html --acl public-read
           
